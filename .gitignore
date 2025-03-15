@@ -485,3 +485,8 @@ $RECYCLE.BIN/
 
 # Log folder
 [Ll]og/
+
+# Appsetting files
+AI_Recruitment_Assistant.Api/appsettings.json
+AI_Recruitment_Assistant.Api/appsettings.Development.json
+

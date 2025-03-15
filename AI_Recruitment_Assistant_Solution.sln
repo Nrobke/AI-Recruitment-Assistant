@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{350DC3D0-940
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_Recruitment_Assistant.Api", "AI_Recruitment_Assistant.Api\AI_Recruitment_Assistant.Api.csproj", "{F0A5A933-419D-47F2-A91D-67D7AE9F1FC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_Recruitment_Assistant.Domain", "AI_Recruitment_Assistant.Domain\AI_Recruitment_Assistant.Domain.csproj", "{05F44078-E1F9-462F-9EBA-05161F650ED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_Recruitment_Assistant.Application", "AI_Recruitment_Assistant.Application\AI_Recruitment_Assistant.Application.csproj", "{7D736FEF-47B7-4C68-9F76-DEB297028618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_Recruitment_Assistant.Infrastructure", "AI_Recruitment_Assistant.Infrastructure\AI_Recruitment_Assistant.Infrastructure.csproj", "{70B7F903-2D98-42D2-B256-E322D7F9AF5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DD83DDB7-04AB-47D3-BDE8-8BBD81D33309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +25,26 @@ Global
 		{F0A5A933-419D-47F2-A91D-67D7AE9F1FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0A5A933-419D-47F2-A91D-67D7AE9F1FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0A5A933-419D-47F2-A91D-67D7AE9F1FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F44078-E1F9-462F-9EBA-05161F650ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F44078-E1F9-462F-9EBA-05161F650ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F44078-E1F9-462F-9EBA-05161F650ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F44078-E1F9-462F-9EBA-05161F650ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D736FEF-47B7-4C68-9F76-DEB297028618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D736FEF-47B7-4C68-9F76-DEB297028618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D736FEF-47B7-4C68-9F76-DEB297028618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D736FEF-47B7-4C68-9F76-DEB297028618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70B7F903-2D98-42D2-B256-E322D7F9AF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B7F903-2D98-42D2-B256-E322D7F9AF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B7F903-2D98-42D2-B256-E322D7F9AF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B7F903-2D98-42D2-B256-E322D7F9AF5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F0A5A933-419D-47F2-A91D-67D7AE9F1FC9} = {350DC3D0-940B-44E7-82BB-5A7D3A101250}
+		{05F44078-E1F9-462F-9EBA-05161F650ED4} = {350DC3D0-940B-44E7-82BB-5A7D3A101250}
+		{7D736FEF-47B7-4C68-9F76-DEB297028618} = {350DC3D0-940B-44E7-82BB-5A7D3A101250}
+		{70B7F903-2D98-42D2-B256-E322D7F9AF5B} = {350DC3D0-940B-44E7-82BB-5A7D3A101250}
 	EndGlobalSection
 EndGlobal

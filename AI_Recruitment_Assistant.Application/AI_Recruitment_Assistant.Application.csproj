@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+	<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+	<PackageReference Include="Mapster" Version="7.4.0" />
+	<PackageReference Include="MediatR" Version="12.4.1" />
+	<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.13" />
+	<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+	<PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="9.0.2" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AI_Recruitment_Assistant.Domain\AI_Recruitment_Assistant.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
