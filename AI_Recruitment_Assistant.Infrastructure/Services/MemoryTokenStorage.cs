@@ -6,7 +6,7 @@ namespace AI_Recruitment_Assistant.Infrastructure.Services;
 
 public class MemoryTokenStorage : ITokenStorageService
 {
-    private const string CacheKey = "google_calendar_tokens";
+    private const string CacheKey = "calendar_t";
     private readonly IMemoryCache _cache;
 
     public MemoryTokenStorage(IMemoryCache cache)

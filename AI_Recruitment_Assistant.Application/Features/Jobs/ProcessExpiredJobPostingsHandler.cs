@@ -3,6 +3,7 @@ using AI_Recruitment_Assistant.Application.Abstractions.Services;
 using AI_Recruitment_Assistant.Domain.Entities;
 using AI_Recruitment_Assistant.Domain.Repositories;
 using AI_Recruitment_Assistant.Domain.Shared;
+using Microsoft.Extensions.Logging;
 
 namespace AI_Recruitment_Assistant.Application.Features.Jobs;
 
@@ -10,13 +11,16 @@ internal sealed class ProcessExpiredJobPostingsHandler(
     IJobRepository jobRepository,
     IRepository repository,
     ICalendarService calendarService,
-    IEmailService emailService)
+    IEmailService emailService,
+    ILogger<ProcessExpiredJobPostingsHandler> logger)
     : ICommandHandler<ProcessExpiredJobPostingsCommand>
 {
     private readonly IJobRepository _jobRepository = jobRepository;
     private readonly ICalendarService _calendarService = calendarService;
     private readonly IEmailService _emailService = emailService;
     private readonly IRepository _repository = repository;
+    private readonly ILogger<ProcessExpiredJobPostingsHandler> _logger = logger;
+
 
     public async Task<Result> Handle(
         ProcessExpiredJobPostingsCommand request,
@@ -62,7 +66,7 @@ internal sealed class ProcessExpiredJobPostingsHandler(
                 }
                 catch (Exception ex)
                 {
-                    
+                    _logger.LogError(ex, "Failed to schedule interview for application {ApplicationId}", application.Id);
                 }
             }
 

@@ -106,6 +106,14 @@ public static class ServiceCollectionExtensions
                 .ForJob("ProcessExpiredJobs")
                 .WithIdentity("ProcessExpiredJobsTrigger")
                 .WithCronSchedule("0 0 * * * ?"));
+
+            var jobKey = new JobKey("InterviewReminderJob");
+            q.AddJob<InterviewReminderJob>(opts => opts.WithIdentity(jobKey));
+
+            q.AddTrigger(opts => opts
+                .ForJob(jobKey)
+                .WithIdentity("InterviewReminderJob-Trigger")
+                .WithCronSchedule("0 0 8 * * ?")); // Example: Run daily at 8 AM
         });
 
         services.AddQuartzHostedService(options =>

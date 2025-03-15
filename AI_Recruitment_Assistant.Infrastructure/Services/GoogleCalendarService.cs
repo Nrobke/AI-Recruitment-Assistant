@@ -56,12 +56,13 @@ public class GoogleCalendarService : ICalendarService
         }
     }
 
-    private static async Task<string> CreateCalendarEvent(
+    private async Task<string> CreateCalendarEvent(
         HttpClient client,
         CalendarEventRequest request)
     {
+        var url = _config.GetValue<string>("CalendarApiUrl");
         var response = await client.PostAsJsonAsync(
-            "https://www.googleapis.com/calendar/v3/calendars/primary/events",
+            $"{url}/calendars/primary/events",
             new
             {
                 summary = $"Interview for {request.JobTitle}",
